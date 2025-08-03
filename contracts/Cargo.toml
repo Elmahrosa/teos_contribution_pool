@@ -1,0 +1,31 @@
+[package]
+name = "contribution"
+version = "0.1.0"
+edition = "2021"
+
+# Description of the project
+description = "A Solana smart contract for managing contributions."
+license = "MIT"
+repository = "https://github.com/yourusername/teos_contribution_pool"
+homepage = "https://github.com/yourusername/teos_contribution_pool"
+keywords = ["solana", "anchor", "smart contract", "contribution"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+anchor-lang = "0.26.0"  # Anchor framework for Solana smart contracts
+anchor-spl = "0.26.0"    # SPL token library for Anchor
+bincode = "1.3"           # Serialization library for Rust
+serde = { version = "1.0", features = ["derive"] }  # Serialization framework
+thiserror = "1.0"         # Error handling library
+
+[dev-dependencies]
+anchor-lang = { version = "0.26.0", features = ["test-utils"] }  # Testing utilities for Anchor
+
+[profile.dev]
+opt-level = 2  # Optimization level for development builds
+
+[profile.release]
+opt-level = 3  # Optimization level for release builds
+lto = true     # Enable link-time optimization
