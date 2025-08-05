@@ -1,3 +1,11 @@
+ ! [Deploy Frontend](https://github.com/your-username/teos_contribution_pool/actions/workflows/deploy.yml/badge.svg)
+ ## 🚀 Continuous Deployment
+
+![Deploy Frontend](https://github.com/elmahrosa/teos_contribution_pool/actions/workflows/deploy.yml/badge.svg)
+
+This repository now uses a React-based GitHub Actions workflow (`deploy.yml`) to deploy the frontend contribution portal to GitHub Pages.  
+Old Jekyll logic is deprecated and retained only for archival reference.
+ 
 This is the pla# 💰 $TEOS Private Contribution Pool
 
 A fully decentralized **SOL-based contribution smart contract**, whitelist portal, and backend for verified $TEOS holders to access exclusive token trades. This platform is part of the TeosEgypt ecosystem and is built with **Anchor (Rust), Next.js (React), and Express (Node.js)**.
