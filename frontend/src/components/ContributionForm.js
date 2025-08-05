@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import useWallet from '../hooks/useWallet';
 
 const ContributionForm = () => {
     const [amount, setAmount] = useState('');
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
+    const walletAddress = useWallet();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -18,6 +20,7 @@ const ContributionForm = () => {
         try {
             const response = await axios.post(`${process.env.REACT_APP_API_URL}/contribute`, {
                 amount,
+                walletAddress,
             });
             alert(`Contribution successful: ${response.data.message}`);
             setAmount('');
